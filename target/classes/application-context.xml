@@ -14,14 +14,94 @@
 <property name="name" value="Harsh"/>
 <property name="gender" value="male"/>
 <property name="address" ref="add"/>
-</bean>
+<property name="list">
+<list>
+<value>1232</value>
+<value>132</value>
+<value>100</value>
+<value>100</value>
+<value>142</value>
+<value>162</value>
+<value>200</value>
+</list>
+</property>
 
+<property name="set">
+<set>
+<value>1232</value>
+<value>132</value>
+<value>100</value>
+<value>142</value>
+<value>162</value>
+<value>200</value>
+</set>
+
+</property>
+
+<property name="map">
+<map>
+<entry key="1" value="One"/>
+<entry key="2" value="TWO"/>
+<entry key="3" value="THREE"/>
+<entry key="4" value="FOUR"/>
+<entry key="5" value="FIVE"/>
+<entry key="6" value="SIX"/>
+<entry key="1" value="ONE"/>
+</map>
+
+</property>
+
+
+</bean>
 
 <bean name="emp2" class="com.my.spring.Model.Employee">
 <constructor-arg name="id" value="1002"/>
 <constructor-arg name="name" value="vansh"/>
 <constructor-arg name="gender" value="male"/>
 <constructor-arg name="address" ref="add"/>
+<constructor-arg name="list">
+
+<list>
+<value>1232</value>
+<value>132</value>
+<value>100</value>
+<value>100</value>
+<value>142</value>
+<value>162</value>
+<value>200</value>
+</list>
+</constructor-arg>
+
+<constructor-arg name="set">
+<set>
+<value>1232</value>
+<value>132</value>
+<value>100</value>
+<value>142</value>
+<value>162</value>
+<value>200</value>
+</set>
+</constructor-arg>
+
+
+<constructor-arg name="map">
+<map>
+<entry key="1" value="One"/>
+<entry key="2" value="TWO"/>
+<entry key="3" value="THREE"/>
+<entry key="4" value="FOUR"/>
+<entry key="5" value="FIVE"/>
+<entry key="6" value="SIX"/>
+<entry key="1" value="ONE"/>
+</map>
+</constructor-arg>
+
+
+
+
+
 </bean>
+
+
 
 </beans>

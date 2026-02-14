@@ -1,5 +1,9 @@
 package com.my.spring.Model;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class Employee {
 	
 	private int id;
@@ -7,25 +11,72 @@ public class Employee {
 	
 	private Address address;
 	
+	private List<Integer> myList;
+	private Set<Integer> set;
+	private Map<Integer,String> map;
+	
 	public Employee() {
 		super();
 		System.out.println("Employee.Employee()");
 	}
 	
-	public Employee(int id, String name, String gender, Address address) {
+	
+	public Employee(int id, String name, String gender, Address address, List<Integer> myList, Set<Integer> set,
+			Map<Integer, String> map) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.address = address;
+		this.myList = myList;
+		this.set = set;
+		this.map = map;
 	}
+
+
+	public List<Integer> getmyList() {
+		return myList;
+	}
+
+
+	public void setList(List<Integer> myList) {
+		System.out.println("Employee.setList()");
+		this.myList = myList;
+	
+	}
+
+
+	public Set<Integer> getSet() {
+		return set;
+	}
+
+
+	public void setSet(Set<Integer> set) {
+		System.out.println("Employee.setSet()");
+		this.set = set;
+	}
+
+
+	public Map<Integer, String> getMap() {
+		return map;
+	}
+
+
+	public void setMap(Map<Integer, String> map) {
+		System.out.println("Employee.setMap()");
+		this.map = map;
+		
+	}
+
 
 	public Address getAddress() {
 		return address;
 	}
 
 	public void setAddress(Address address) {
+		System.out.println("Employee.setAddress()");
 		this.address = address;
+		
 	}
 
 	public int getId() {
@@ -50,12 +101,14 @@ public class Employee {
 		this.gender = gender;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
-	
-	 
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + ", myList="
+				+ myList + ", set=" + set + ", map=" + map + "]";
 	}
+
+	
 	
 	
 
