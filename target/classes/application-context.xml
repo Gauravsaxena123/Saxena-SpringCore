@@ -5,102 +5,25 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-<bean name="add" class="com.my.spring.Model.Address">
+<bean name="address" class="com.my.spring.Model.Address">
 <property name="city" value="Noida"/>
 <property name="state" value="UP"/>
 </bean>
-<bean name="emp1" class="com.my.spring.Model.Employee">
+<bean name="emp1" class="com.my.spring.Model.Employee" autowire="byName" scope="prototype">
 <property name="id" value="1001"/>
 <property name="name" value="Harsh"/>
 <property name="gender" value="male"/>
-<property name="address" ref="add"/>
-<property name="list">
-<list>
-<value>1232</value>
-<value>132</value>
-<value>100</value>
-<value>100</value>
-<value>142</value>
-<value>162</value>
-<value>200</value>
-</list>
-</property>
-
-<property name="set">
-<set>
-<value>1232</value>
-<value>132</value>
-<value>100</value>
-<value>142</value>
-<value>162</value>
-<value>200</value>
-</set>
-
-</property>
-
-<property name="map">
-<map>
-<entry key="1" value="One"/>
-<entry key="2" value="TWO"/>
-<entry key="3" value="THREE"/>
-<entry key="4" value="FOUR"/>
-<entry key="5" value="FIVE"/>
-<entry key="6" value="SIX"/>
-<entry key="1" value="ONE"/>
-</map>
-
-</property>
-
-
 </bean>
 
-<bean name="emp2" class="com.my.spring.Model.Employee">
+<bean name="emp2" class="com.my.spring.Model.Employee" autowire="byName">
 <constructor-arg name="id" value="1002"/>
 <constructor-arg name="name" value="vansh"/>
 <constructor-arg name="gender" value="male"/>
-<constructor-arg name="address" ref="add"/>
-<constructor-arg name="list">
-
-<list>
-<value>1232</value>
-<value>132</value>
-<value>100</value>
-<value>100</value>
-<value>142</value>
-<value>162</value>
-<value>200</value>
-</list>
-</constructor-arg>
-
-<constructor-arg name="set">
-<set>
-<value>1232</value>
-<value>132</value>
-<value>100</value>
-<value>142</value>
-<value>162</value>
-<value>200</value>
-</set>
-</constructor-arg>
-
-
-<constructor-arg name="map">
-<map>
-<entry key="1" value="One"/>
-<entry key="2" value="TWO"/>
-<entry key="3" value="THREE"/>
-<entry key="4" value="FOUR"/>
-<entry key="5" value="FIVE"/>
-<entry key="6" value="SIX"/>
-<entry key="1" value="ONE"/>
-</map>
-</constructor-arg>
-
-
-
-
-
 </bean>
+
+
+
+
 
 
 
