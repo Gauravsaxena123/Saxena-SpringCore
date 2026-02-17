@@ -1,29 +1,27 @@
 package com.my.spring;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.my.spring.Model.Address;
 import com.my.spring.Model.Employee;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext ioc = new  ClassPathXmlApplicationContext("application-context.xml");
+		ApplicationContext ioc = new  AnnotationConfigApplicationContext("com.my.spring.model");
+		Employee emp = ioc.getBean(Employee.class);
+		Address add = ioc.getBean(Address.class);
 		
-	Employee bean =	ioc.getBean("emp1",Employee.class);
+		emp.setName("Vikas");
+		
+		System.out.println(emp);
+		System.out.println(add);
+		
+		
 	
-	System.out.println(bean);
-//	 bean =	ioc.getBean("emp1",Employee.class);
-//	System.out.println(bean);
-//	bean =	ioc.getBean("emp1",Employee.class);
-//	System.out.println(bean);
-//	bean.setName("Manish");
-//	System.out.println(bean);
-	
-Employee bean2 =	ioc.getBean("emp2",Employee.class);
-	
-	System.out.println(bean2);
 	
 
 	}
